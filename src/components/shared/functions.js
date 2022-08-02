@@ -1,3 +1,5 @@
+// STRINGS AND ARRAYS
+
 export var romanToInt = function (s) {
   if (s.length === 1) {
     return romanKey[s]
@@ -23,4 +25,55 @@ const romanKey = {
   C: 100,
   D: 500,
   M: 1000,
+}
+
+// RESURSION
+
+export const fib = (num, stop, last = 1, index = 1) => {
+  if (stop <= 1) return 1
+  const sum = num + last
+  last = num
+  if (index === stop) return sum
+  index++
+  return fib(sum, stop, last, index)
+}
+
+export const recFact = num => {
+  if (num <= 1) return 1
+  return num * recFact(num - 1)
+}
+
+// SORTING
+
+export const mergeSort = array => {
+  if (array.length <= 1) return array
+  const middleIndex = Math.floor(array.length / 2)
+  const leftArray = array.slice(0, middleIndex)
+  const rightArray = array.slice(middleIndex)
+
+  return sort(mergeSort(leftArray), mergeSort(rightArray))
+}
+
+const sort = (leftArray, rightArray) => {
+  const output = []
+  let leftIndex = 0
+  let rightIndex = 0
+
+  while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+    const leftElement = leftArray[leftIndex]
+    const rightElement = rightArray[rightIndex]
+
+    if (leftElement < rightElement) {
+      output.push(leftElement)
+      leftIndex++
+    } else {
+      output.push(rightElement)
+      rightIndex++
+    }
+  }
+  return [
+    ...output,
+    ...leftArray.slice(leftIndex),
+    ...rightArray.slice(rightIndex),
+  ]
 }

@@ -1,15 +1,19 @@
 import { Box, Button, Image, Input, Text } from "@chakra-ui/react"
 import React from "react"
 import { useState } from "react"
-import { romanToInt } from "./shared/functions"
+import { fib, mergeSort, romanToInt } from "./shared/functions"
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = props => {
   const [romanNumeralText, setRomanNumeralText] = useState("")
   const [romanNumeralInput, setRomanNumeralInput] = useState("")
+  const [fibText, setFibText] = useState("")
+  const [fibInput, setFibInput] = useState("")
+  const [mergeText, setMergeText] = useState("")
+  const [mergeInput, setMergeInput] = useState("")
   return (
-    <Box backgroundColor="black" height={"170vh"} overflow={"scroll"}>
+    <Box backgroundColor="black" height={"250vh"} overflow={"scroll"}>
       <Image
         position={"absolute"}
         top={"0"}
@@ -19,7 +23,7 @@ const Home: React.FC<HomeProps> = props => {
       />
       <Box
         position={"absolute"}
-        top={"38rem"}
+        top={"70vh"}
         width={"100%"}
         display={"flex"}
         justifyContent={"center"}
@@ -30,10 +34,12 @@ const Home: React.FC<HomeProps> = props => {
           Sean La Tourette
         </Text>
         <Text
+          textAlign={"center"}
           fontFamily={"Cormorant"}
-          marginTop={"1rem"}
+          marginTop={"1vh"}
           fontSize={"1.5rem"}
-          color={"white"}
+          color={"gold"}
+          padding="2rem"
         >
           Web Design never looked this good.
         </Text>
@@ -42,11 +48,20 @@ const Home: React.FC<HomeProps> = props => {
           height={"100%"}
           display={"flex"}
           justifyContent={"center"}
-          alignItems={"center"}
           flexDirection={"column"}
-          padding="2rem"
+          marginTop={"5vh"}
+          paddingInline="2rem"
+          textAlign={"left"}
         >
-          <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"white"}>
+          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+            About Me
+          </Text>
+          <Text
+            marginTop={"1rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"1rem"}
+            color={"white"}
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -67,11 +82,16 @@ const Home: React.FC<HomeProps> = props => {
           flexDirection={"column"}
           width={"100%"}
         >
-          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"white"}>
+          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
             Translating Roman Numerals
           </Text>
-          <Text marginTop={"1rem"} fontFamily={"Cormorant"} fontSize={"1rem"} color={"white"}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+          <Text
+            marginTop={"1rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"1rem"}
+            color={"white"}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
@@ -94,6 +114,7 @@ const Home: React.FC<HomeProps> = props => {
               />
               <Button
                 borderLeftRadius={"0"}
+                backgroundColor={"gold"}
                 onClick={() => {
                   setRomanNumeralText(romanToInt(romanNumeralInput))
                 }}
@@ -106,10 +127,129 @@ const Home: React.FC<HomeProps> = props => {
               textAlign={"center"}
               fontFamily={"Cormorant"}
               fontSize={"1.5rem"}
-              color={"white"}
-         
+              color={"gold"}
             >
               {romanNumeralText}
+            </Text>
+          </Box>
+        </Box>
+        <Box
+          backgroundColor={"black"}
+          height={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          padding={"2rem"}
+          flexDirection={"column"}
+          width={"100%"}
+        >
+          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+            Fibonacci Sequence
+          </Text>
+          <Text
+            marginTop={"1rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"1rem"}
+            color={"white"}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </Text>
+          <Box
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            marginTop={"1rem"}
+          >
+            <Box display={"flex"} flexDirection={"row"}>
+              <Input
+                borderRightRadius={"0"}
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+                onChange={e => {
+                  setFibInput(e.target.value.toUpperCase())
+                }}
+              />
+              <Button
+                borderLeftRadius={"0"}
+                backgroundColor={"gold"}
+                onClick={() => {
+                  setFibText(fib(1, Number(fibInput) - 1))
+                }}
+              >
+                Find
+              </Button>
+            </Box>
+
+            <Text
+              textAlign={"center"}
+              fontFamily={"Cormorant"}
+              fontSize={"1.5rem"}
+              color={"gold"}
+            >
+              {fibText}
+            </Text>
+          </Box>
+        </Box>
+        <Box
+          backgroundColor={"black"}
+          height={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          padding={"2rem"}
+          flexDirection={"column"}
+          width={"100%"}
+        >
+          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+            Merge Sort
+          </Text>
+          <Text
+            marginTop={"1rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"1rem"}
+            color={"white"}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </Text>
+          <Box
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            marginTop={"1rem"}
+          >
+            <Box display={"flex"} flexDirection={"row"}>
+              <Input
+                borderRightRadius={"0"}
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+                onChange={e => {
+                  setMergeInput(e.target.value.toUpperCase())
+                }}
+              />
+              <Button
+                borderLeftRadius={"0"}
+                backgroundColor={"gold"}
+                onClick={() => {
+                  setMergeText(mergeSort(mergeInput.split("")))
+                }}
+              >
+                Sort
+              </Button>
+            </Box>
+
+            <Text
+              textAlign={"center"}
+              fontFamily={"Cormorant"}
+              fontSize={"1.5rem"}
+              color={"gold"}
+            >
+              {mergeText}
             </Text>
           </Box>
         </Box>
