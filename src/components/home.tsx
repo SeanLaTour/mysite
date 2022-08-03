@@ -14,8 +14,8 @@ const Home: React.FC<HomeProps> = props => {
   const [mergeInput, setMergeInput] = useState("")
   const [BSTInput, setBSTInput] = useState("")
   const [BSTSearch, setBSTSearch] = useState("")
-  const [currentBST, setCurrentBST] = useState()
-  const [currentBSTNumber, setCurrentBSTNumber] = useState()
+  const [currentBST, setCurrentBST] = useState([])
+  const [currentBSTNumber, setCurrentBSTNumber] = useState([])
 
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
@@ -122,6 +122,10 @@ const Home: React.FC<HomeProps> = props => {
                 borderLeftRadius={"0"}
                 backgroundColor={"gold"}
                 onClick={() => {
+                  if (!romanToInt(romanNumeralInput)) {
+                    setRomanNumeralText("Must be a valide roman numeral.")
+                    return
+                  }
                   setRomanNumeralText(romanToInt(romanNumeralInput))
                 }}
               >
@@ -170,6 +174,7 @@ const Home: React.FC<HomeProps> = props => {
           >
             <Box display={"flex"} flexDirection={"row"}>
               <Input
+                type={"number"}
                 borderRightRadius={"0"}
                 marginBottom={".5rem"}
                 color={"white"}
@@ -182,7 +187,11 @@ const Home: React.FC<HomeProps> = props => {
                 borderLeftRadius={"0"}
                 backgroundColor={"gold"}
                 onClick={() => {
-                  setFibText(fib(1, Number(fibInput) - 1))
+                  if (Number(fibInput) > 1000) {
+                    setFibText("Number cannot be higher than 1000")
+                    return
+                  }
+                  setFibText(`${BigInt(fib(1, Number(fibInput) - 1))}`)
                 }}
               >
                 Find
@@ -305,21 +314,23 @@ const Home: React.FC<HomeProps> = props => {
                 borderLeftRadius={"0"}
                 backgroundColor={"gold"}
                 onClick={() => {
-                  if (BSTInput.length === 0) return
-                  if (currentBST === undefined) {
-                    const bst = new BST(BSTInput)
-                    setCurrentBST(bst)
-                    console.log(currentBST)
-                    const string = `The root of your BST is ${BSTInput}`
-                    setCurrentBSTNumber(string)
-                  } else {
-                    currentBST.addNode(BSTInput)
-                    console.log(currentBST)
-                    const string = `You added a node with the value of ${
-                      currentBST.searchData(BSTInput).data
-                    }`
-                    setCurrentBSTNumber(string)
+                  console.log(BSTInput)
+                  if (Number(BSTInput) >= 100 || Number(BSTInput) <= 0) {
+                    setCurrentBSTNumber([
+                      "Please enter a number between 0 and 100.",
+                      "",
+                      "",
+                    ])
+
+                    return
                   }
+                  setCurrentBST([...currentBST, BSTInput])
+                  setCurrentBSTNumber([
+                    `You added the node ${BSTInput}`,
+                    "",
+                    "",
+                  ])
+                  console.log(currentBST)
                 }}
               >
                 Add Node
@@ -341,28 +352,19 @@ const Home: React.FC<HomeProps> = props => {
                 borderLeftRadius={"0"}
                 backgroundColor={"gold"}
                 onClick={() => {
-                  if (!currentBST) {
-                    setCurrentBSTNumber("That node does not exist.")
+                  if (!currentBST.includes(BSTSearch)) {
+                    setCurrentBSTNumber(["That node does not exit", "", ""])
                     return
                   }
-                  console.log(currentBST)
-                  if (!currentBST.searchData(BSTInput)) {
-                    setCurrentBSTNumber("That node does not exist.")
-                    return
+                  const bst = new BST(currentBST[0])
+                  for (let i = 1; i < currentBST.length; i++) {
+                    bst.addNode(currentBST[i])
                   }
-                  const string = `The node: ${
-                    currentBST.searchData(BSTSearch).data
-                  } has a left connection of ${
-                    currentBST.searchData(BSTSearch).left
-                      ? currentBST.searchData(BSTSearch).left.data
-                      : "nothing"
-                  } and a right connection of ${
-                    currentBST.searchData(BSTSearch).right
-                      ? currentBST.searchData(BSTSearch).right.data
-                      : "nothing"
-                  }`
-                  console.log(string)
-                  setCurrentBSTNumber(string)
+                  const node = bst.searchData(BSTSearch)
+                  const left = node.left ? node.left.data : "null"
+                  const right = node.right ? node.right.data : "null"
+                  console.log(node, left, right)
+                  setCurrentBSTNumber([node.data, left, right])
                 }}
               >
                 Search Node
@@ -375,15 +377,36 @@ const Home: React.FC<HomeProps> = props => {
               fontSize={"1.5rem"}
               color={"gold"}
             >
-              {currentBSTNumber}
+              {currentBSTNumber[0]}
             </Text>
+            <Box
+              width={"100%"}
+              justifyContent={"space-around"}
+              display={"flex"}
+              flexDirection={"row"}
+            >
+              <Text
+                textAlign={"center"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"gold"}
+              >
+                {currentBSTNumber[1]}
+              </Text>
+              <Text
+                textAlign={"center"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"gold"}
+              >
+                {currentBSTNumber[2]}
+              </Text>
+            </Box>
           </Box>
         </Box>
       </Box>
     </Box>
   )
 }
-
-const buildBSTUI = bst => {}
 
 export default Home

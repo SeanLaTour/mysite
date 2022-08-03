@@ -82,7 +82,7 @@ const sort = (leftArray, rightArray) => {
 
 //BST
 
-class Node {
+export class Node {
   constructor(data) {
     this.data = data
     this.left = null
@@ -92,7 +92,6 @@ class Node {
 
 export class BST {
   constructor(data) {
-    this.node = null
     this.root = new Node(data)
   }
 
@@ -118,6 +117,7 @@ export class BST {
 
   searchData(val) {
     const searchTree = node => {
+      let count = 1
       if (val === node.data) {
         return node
       } else if (val !== node) {
