@@ -1,7 +1,7 @@
 import { Box, Button, Image, Input, Text } from "@chakra-ui/react"
 import React from "react"
 import { useState } from "react"
-import { fib, mergeSort, romanToInt } from "./shared/functions"
+import { fib, mergeSort, romanToInt, BST } from "./shared/functions"
 
 interface HomeProps {}
 
@@ -12,8 +12,13 @@ const Home: React.FC<HomeProps> = props => {
   const [fibInput, setFibInput] = useState("")
   const [mergeText, setMergeText] = useState("")
   const [mergeInput, setMergeInput] = useState("")
+  const [BSTInput, setBSTInput] = useState("")
+  const [BSTSearch, setBSTSearch] = useState("")
+  const [currentBST, setCurrentBST] = useState()
+  const [currentBSTNumber, setCurrentBSTNumber] = useState()
+
   return (
-    <Box backgroundColor="black" height={"250vh"} overflow={"scroll"}>
+    <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
       <Image
         position={"absolute"}
         top={"0"}
@@ -36,12 +41,13 @@ const Home: React.FC<HomeProps> = props => {
         <Text
           textAlign={"center"}
           fontFamily={"Cormorant"}
-          marginTop={"1vh"}
+          marginTop={".5vh"}
           fontSize={"1.5rem"}
           color={"gold"}
           padding="2rem"
+          paddingTop={"3vh"}
         >
-          Web Design never looked this good.
+          Web Design Never Looked This Good.
         </Text>
         <Box
           backgroundColor={"black"}
@@ -224,6 +230,7 @@ const Home: React.FC<HomeProps> = props => {
           >
             <Box display={"flex"} flexDirection={"row"}>
               <Input
+                type={"number"}
                 borderRightRadius={"0"}
                 marginBottom={".5rem"}
                 color={"white"}
@@ -253,9 +260,130 @@ const Home: React.FC<HomeProps> = props => {
             </Text>
           </Box>
         </Box>
+        <Box
+          backgroundColor={"black"}
+          height={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          padding={"2rem"}
+          flexDirection={"column"}
+          width={"100%"}
+        >
+          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+            Binary Search Trees
+          </Text>
+          <Text
+            marginTop={"1rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"1rem"}
+            color={"white"}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </Text>
+          <Box
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            marginTop={"1rem"}
+          >
+            <Box display={"flex"} flexDirection={"row"}>
+              <Input
+                type={"number"}
+                borderRightRadius={"0"}
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+                onChange={e => {
+                  setBSTInput(e.target.value)
+                }}
+              />
+              <Button
+                width="50vw"
+                borderLeftRadius={"0"}
+                backgroundColor={"gold"}
+                onClick={() => {
+                  if (BSTInput.length === 0) return
+                  if (currentBST === undefined) {
+                    const bst = new BST(BSTInput)
+                    setCurrentBST(bst)
+                    console.log(currentBST)
+                    const string = `The root of your BST is ${BSTInput}`
+                    setCurrentBSTNumber(string)
+                  } else {
+                    currentBST.addNode(BSTInput)
+                    console.log(currentBST)
+                    const string = `You added a node with the value of ${
+                      currentBST.searchData(BSTInput).data
+                    }`
+                    setCurrentBSTNumber(string)
+                  }
+                }}
+              >
+                Add Node
+              </Button>
+            </Box>
+            <Box display={"flex"} flexDirection={"row"}>
+              <Input
+                type={"number"}
+                borderRightRadius={"0"}
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+                onChange={e => {
+                  setBSTSearch(e.target.value)
+                }}
+              />
+              <Button
+                width="50vw"
+                borderLeftRadius={"0"}
+                backgroundColor={"gold"}
+                onClick={() => {
+                  if (!currentBST) {
+                    setCurrentBSTNumber("That node does not exist.")
+                    return
+                  }
+                  console.log(currentBST)
+                  if (!currentBST.searchData(BSTInput)) {
+                    setCurrentBSTNumber("That node does not exist.")
+                    return
+                  }
+                  const string = `The node: ${
+                    currentBST.searchData(BSTSearch).data
+                  } has a left connection of ${
+                    currentBST.searchData(BSTSearch).left
+                      ? currentBST.searchData(BSTSearch).left.data
+                      : "nothing"
+                  } and a right connection of ${
+                    currentBST.searchData(BSTSearch).right
+                      ? currentBST.searchData(BSTSearch).right.data
+                      : "nothing"
+                  }`
+                  console.log(string)
+                  setCurrentBSTNumber(string)
+                }}
+              >
+                Search Node
+              </Button>
+            </Box>
+
+            <Text
+              textAlign={"center"}
+              fontFamily={"Cormorant"}
+              fontSize={"1.5rem"}
+              color={"gold"}
+            >
+              {currentBSTNumber}
+            </Text>
+          </Box>
+        </Box>
       </Box>
     </Box>
   )
 }
+
+const buildBSTUI = bst => {}
 
 export default Home

@@ -1,3 +1,5 @@
+import React from "react"
+
 // STRINGS AND ARRAYS
 
 export var romanToInt = function (s) {
@@ -76,4 +78,56 @@ const sort = (leftArray, rightArray) => {
     ...leftArray.slice(leftIndex),
     ...rightArray.slice(rightIndex),
   ]
+}
+
+//BST
+
+class Node {
+  constructor(data) {
+    this.data = data
+    this.left = null
+    this.right = null
+  }
+}
+
+export class BST {
+  constructor(data) {
+    this.node = null
+    this.root = new Node(data)
+  }
+
+  addNode(data) {
+    const node = this.root
+    const searchTree = node => {
+      if (node.data > data) {
+        if (node.left === null) {
+          node.left = new Node(data)
+        } else if (node.left !== null) {
+          return searchTree(node.left)
+        }
+      } else if (node.data < data) {
+        if (node.right === null) {
+          node.right = new Node(data)
+        } else if (node.right !== null) {
+          return searchTree(node.right)
+        }
+      }
+    }
+    return searchTree(node)
+  }
+
+  searchData(val) {
+    const searchTree = node => {
+      if (val === node.data) {
+        return node
+      } else if (val !== node) {
+        if (val < node.data) {
+          return searchTree(node.left)
+        } else if (val > node.data) {
+          return searchTree(node.right)
+        }
+      }
+    }
+    return searchTree(this.root)
+  }
 }
