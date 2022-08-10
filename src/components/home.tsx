@@ -117,7 +117,7 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={"1rem"}
                 color={"white"}
               >
-                At my core I am an artist. I am a musician, I play guitar, bass,
+                At my core I am an artist and musician. I play guitar, bass,
                 piano and drums, combining these to compose my own songs. I am a
                 writer, having been published for my poetry. And of course I am
                 a developer, enjoying creating games and dissecting the how my
@@ -134,34 +134,116 @@ const Home: React.FC<HomeProps> = props => {
             fontSize={"2rem"}
             color={"gold"}
           >
+            Career
+          </Text>
+        </Box>
+        <Box
+          backgroundColor={"black"}
+          width={"100%"}
+          paddingTop={"1rem"}
+          paddingInline="2rem"
+          display={"flex"}
+          justifyContent={"space-between"}
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Box
+            width={{ base: "100%", md: "48.5%" }}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+              Alaeris
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+            >
+              As a full stack developer for at Alaeris I had the opportunity to
+              work with some of the industry's top personel. Our team consisted
+              of founding mechinical engineers from Scoot (now known as Bird),
+              artists that drew for popular Nikeloden shows from the 90's and
+              2000's, developers that helped design Orbitz's web app, UI/UX
+              designers from video games creator EA, and backend developers that
+              scaled the mobile app Calm from round one funding. Together we
+              have been working to secure funding for our mission of creating a
+              carbon negative crypto currency called the Alaeris Token. It was
+              my privilege to design the Alaeris landing page, email collection
+              page, as well as participate in a creative and business capacity
+              building the company from the ground up.
+            </Text>
+          </Box>
+          <Box
+            width={{ base: "100%", md: "48.5%" }}
+            display={"flex"}
+            flexDirection={"column"}
+            marginTop={{ base: "2rem", md: "0" }}
+          >
+            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+              WWC
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+            >
+              As a full stack developer for at Alaeris I had the opportunity to
+              work with some of the industry's top personel. Our team consisted
+              of founding mechinical engineers from Scoot (now known as Bird),
+              artists that drew for popular Nikeloden shows from the 90's and
+              2000's, developers that helped design Orbitz's web app, UI/UX
+              designers from video games creator EA, and backend developers that
+              scaled the mobile app Calm from round one funding. Together we
+              have been working to secure funding for our mission of creating a
+              carbon negative crypto currency called the Alaeris Token. It was
+              my privilege to design the Alaeris landing page, email collection
+              page, as well as participate in a creative and business capacity
+              building the company from the ground up.
+            </Text>
+          </Box>
+        </Box>
+
+        <Box width={"100%"} backgroundColor={"black"}>
+          <Text
+            marginTop={{ base: "2rem", md: "2rem" }}
+            padding="2rem"
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+          >
             Data Structures and Algorithms
           </Text>
         </Box>
-        <Box display={"flex"} flexDirection={{ base: "column", md: "row" }}>
+
+        <Box display={"flex"} flexDirection={{ base: "column", lg: "row" }}>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", md: "30rem" }}
+            height={{ base: "100%", lg: "33rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
             flexDirection={"column"}
-            width={{ base: "100%", md: "25%" }}
+            width={{ base: "100%", lg: "25%" }}
           >
-            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              Strings and Arrays
-            </Text>
-            <Text
-              marginTop={"1rem"}
-              fontFamily={"Cormorant"}
-              fontSize={"1rem"}
-              color={"white"}
-            >
-              String and array manipulation refers to the process of handling
-              and analyzing both strings and arrays. It involves various
-              operations concerned with modification and parsing of strings to
-              use and change its data. This function will translate any valid
-              Roman numeral you input into its modern equivalent.
-            </Text>
+            <Box>
+              <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+                Strings and Arrays
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                String and array manipulation refers to the process of handling
+                and analyzing both strings and arrays. It involves various
+                operations concerned with modification and parsing of strings to
+                use and change its data. This function will translate any valid
+                Roman numeral you input into its modern equivalent.
+              </Text>
+            </Box>
             <Box>
               <Text
                 marginTop="1rem"
@@ -215,29 +297,32 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", md: "30rem" }}
+            height={{ base: "100%", lg: "33rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
             flexDirection={"column"}
-            width={{ base: "100%", md: "25%" }}
+            width={{ base: "100%", lg: "25%" }}
           >
-            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              Recursion
-            </Text>
-            <Text
-              marginTop={"1rem"}
-              fontFamily={"Cormorant"}
-              fontSize={"1rem"}
-              color={"white"}
-            >
-              In computer science, recursion is a programming technique using a
-              function or algorithm that calls itself one or more times until a
-              specified condition is met at which time the rest of each
-              repetition is processed from the last one called to the first.
-              This function will find the nth index of the fibinacci sequence,
-              using the number inputted by you as its stopping condition.
-            </Text>
+            <Box>
+              <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+                Recursion
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                In computer science, recursion is a programming technique using
+                a function or algorithm that calls itself one or more times
+                until a specified condition is met at which time the rest of
+                each repetition is processed from the last one called to the
+                first. This function will find the nth index of the fibinacci
+                sequence, using the number inputted by you as its stopping
+                condition.
+              </Text>
+            </Box>
             <Box>
               <Text
                 marginTop="1rem"
@@ -292,29 +377,31 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", md: "30rem" }}
+            height={{ base: "100%", lg: "33rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
             flexDirection={"column"}
-            width={{ base: "100%", md: "25%" }}
+            width={{ base: "100%", lg: "25%" }}
           >
-            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              Sorting
-            </Text>
-            <Text
-              marginTop={"1rem"}
-              fontFamily={"Cormorant"}
-              fontSize={"1rem"}
-              color={"white"}
-            >
-              In computer science, a sorting algorithm is an algorithm that puts
-              elements of a list into an order. The most frequently used orders
-              are numerical order and lexicographical order, and either
-              ascending or descending. This function a merge sort style
-              algorithm to sort all the individual numbers you input into
-              ascending order.
-            </Text>
+            <Box>
+              <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+                Sorting
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                In computer science, a sorting algorithm is an algorithm that
+                puts elements of a list into an order. The most frequently used
+                orders are numerical order and lexicographical order, and either
+                ascending or descending. This function a merge sort style
+                algorithm to sort all the individual numbers you input into
+                ascending order.
+              </Text>
+            </Box>
             <Box>
               <Text
                 marginTop="1rem"
@@ -365,147 +452,151 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", md: "30rem" }}
+            height={{ base: "100%", lg: "33rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
             flexDirection={"column"}
-            width={{ base: "100%", md: "25%" }}
+            width={{ base: "100%", lg: "25%" }}
           >
-            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              Binary Search Trees
-            </Text>
-            <Text
-              marginTop={"1rem"}
-              fontFamily={"Cormorant"}
-              fontSize={"1rem"}
-              color={"white"}
-            >
-              Binary Search Tree is a node-based binary tree data structure
-              which has the following properties: The left subtree of a node
-              contains only nodes with keys lesser than the node’s key. The
-              right subtree of a node contains only nodes with keys greater than
-              the node’s key. The left and right subtree each must also be a
-              binary search tree. The function below allows you to create and
-              search your own BST.
-            </Text>
-            <Text
-              marginTop="1rem"
-              fontFamily={"Cormorant"}
-              fontSize={"1rem"}
-              color={"gold"}
-            >
-              Create BST
-            </Text>
-            <Box
-              justifyContent={"center"}
-              alignItems={"center"}
-              flexDirection={"column"}
-              marginTop={"1rem"}
-            >
-              <Box display={"flex"} flexDirection={"row"}>
-                <Input
-                  type={"number"}
-                  borderRightRadius={"0"}
-                  marginBottom={".5rem"}
-                  color={"white"}
-                  width={"100%"}
-                  onChange={e => {
-                    setBSTInput(e.target.value)
-                  }}
-                />
-                <Button
-                  width="50vw"
-                  borderLeftRadius={"0"}
-                  backgroundColor={"gold"}
-                  onClick={() => {
-                    console.log(BSTInput)
-                    if (Number(BSTInput) >= 100 || Number(BSTInput) <= 0) {
+            <Box>
+              <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+                Binary Search Trees
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                Binary Search Tree is a node-based binary tree data structure
+                which has the following properties: The left subtree of a node
+                contains only nodes with keys lesser than the node’s key. The
+                right subtree of a node contains only nodes with keys greater
+                than the node’s key. The left and right subtree each must also
+                be a binary search tree. The function below allows you to create
+                and search your own BST.
+              </Text>
+            </Box>
+            <Box>
+              <Text
+                marginTop="1rem"
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"gold"}
+              >
+                Create BST
+              </Text>
+              <Box
+                justifyContent={"center"}
+                alignItems={"center"}
+                flexDirection={"column"}
+                marginTop={"1rem"}
+              >
+                <Box display={"flex"} flexDirection={"row"}>
+                  <Input
+                    type={"number"}
+                    borderRightRadius={"0"}
+                    marginBottom={".5rem"}
+                    color={"white"}
+                    width={"100%"}
+                    onChange={e => {
+                      setBSTInput(e.target.value)
+                    }}
+                  />
+                  <Button
+                    width="50vw"
+                    borderLeftRadius={"0"}
+                    backgroundColor={"gold"}
+                    onClick={() => {
+                      console.log(BSTInput)
+                      if (Number(BSTInput) >= 100 || Number(BSTInput) <= 0) {
+                        setCurrentBSTNumber([
+                          "Please enter a number between 0 and 100.",
+                          "",
+                          "",
+                        ])
+
+                        return
+                      }
+                      setCurrentBST([...currentBST, BSTInput])
                       setCurrentBSTNumber([
-                        "Please enter a number between 0 and 100.",
+                        `You added the node ${BSTInput}`,
                         "",
                         "",
                       ])
+                      console.log(currentBST)
+                    }}
+                  >
+                    Add Node
+                  </Button>
+                </Box>
+                <Box display={"flex"} flexDirection={"row"}>
+                  <Input
+                    type={"number"}
+                    borderRightRadius={"0"}
+                    marginBottom={".5rem"}
+                    color={"white"}
+                    width={"100%"}
+                    onChange={e => {
+                      setBSTSearch(e.target.value)
+                    }}
+                  />
+                  <Button
+                    width="50vw"
+                    borderLeftRadius={"0"}
+                    backgroundColor={"gold"}
+                    onClick={() => {
+                      if (!currentBST.includes(BSTSearch)) {
+                        setCurrentBSTNumber(["That node does not exit", "", ""])
+                        return
+                      }
+                      const bst = new BST(currentBST[0])
+                      for (let i = 1; i < currentBST.length; i++) {
+                        bst.addNode(currentBST[i])
+                      }
+                      const node = bst.searchData(BSTSearch)
+                      const left = node.left ? node.left.data : "null"
+                      const right = node.right ? node.right.data : "null"
+                      console.log(node, left, right)
+                      setCurrentBSTNumber([node.data, left, right])
+                    }}
+                  >
+                    Search Node
+                  </Button>
+                </Box>
 
-                      return
-                    }
-                    setCurrentBST([...currentBST, BSTInput])
-                    setCurrentBSTNumber([
-                      `You added the node ${BSTInput}`,
-                      "",
-                      "",
-                    ])
-                    console.log(currentBST)
-                  }}
+                <Text
+                  textAlign={"center"}
+                  fontFamily={"Cormorant"}
+                  fontSize={"1.5rem"}
+                  color={"gold"}
                 >
-                  Add Node
-                </Button>
-              </Box>
-              <Box display={"flex"} flexDirection={"row"}>
-                <Input
-                  type={"number"}
-                  borderRightRadius={"0"}
-                  marginBottom={".5rem"}
-                  color={"white"}
+                  {currentBSTNumber[0]}
+                </Text>
+                <Box
                   width={"100%"}
-                  onChange={e => {
-                    setBSTSearch(e.target.value)
-                  }}
-                />
-                <Button
-                  width="50vw"
-                  borderLeftRadius={"0"}
-                  backgroundColor={"gold"}
-                  onClick={() => {
-                    if (!currentBST.includes(BSTSearch)) {
-                      setCurrentBSTNumber(["That node does not exit", "", ""])
-                      return
-                    }
-                    const bst = new BST(currentBST[0])
-                    for (let i = 1; i < currentBST.length; i++) {
-                      bst.addNode(currentBST[i])
-                    }
-                    const node = bst.searchData(BSTSearch)
-                    const left = node.left ? node.left.data : "null"
-                    const right = node.right ? node.right.data : "null"
-                    console.log(node, left, right)
-                    setCurrentBSTNumber([node.data, left, right])
-                  }}
+                  justifyContent={"space-around"}
+                  display={"flex"}
+                  flexDirection={"row"}
                 >
-                  Search Node
-                </Button>
-              </Box>
-
-              <Text
-                textAlign={"center"}
-                fontFamily={"Cormorant"}
-                fontSize={"1.5rem"}
-                color={"gold"}
-              >
-                {currentBSTNumber[0]}
-              </Text>
-              <Box
-                width={"100%"}
-                justifyContent={"space-around"}
-                display={"flex"}
-                flexDirection={"row"}
-              >
-                <Text
-                  textAlign={"center"}
-                  fontFamily={"Cormorant"}
-                  fontSize={"1.5rem"}
-                  color={"gold"}
-                >
-                  {currentBSTNumber[1]}
-                </Text>
-                <Text
-                  textAlign={"center"}
-                  fontFamily={"Cormorant"}
-                  fontSize={"1.5rem"}
-                  color={"gold"}
-                >
-                  {currentBSTNumber[2]}
-                </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontFamily={"Cormorant"}
+                    fontSize={"1.5rem"}
+                    color={"gold"}
+                  >
+                    {currentBSTNumber[1]}
+                  </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontFamily={"Cormorant"}
+                    fontSize={"1.5rem"}
+                    color={"gold"}
+                  >
+                    {currentBSTNumber[2]}
+                  </Text>
+                </Box>
               </Box>
             </Box>
           </Box>
