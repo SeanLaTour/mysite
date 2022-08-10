@@ -93,9 +93,9 @@ const Home: React.FC<HomeProps> = props => {
                 color={"white"}
               >
                 I am a front end developer with two years of experience working
-                with React, Javascript, HTML and CSS. I have worked primarily
-                with startups and consulting companies on projects that range
-                from small web apps to full-blown social media sites.
+                with React, JavaScript, TypeScript, HTML and CSS. I have worked
+                primarily with startups and consulting companies on projects
+                that range from small web apps to full-blown social media sites.
               </Text>
             </Box>
             <Box
@@ -152,7 +152,10 @@ const Home: React.FC<HomeProps> = props => {
             flexDirection={"column"}
           >
             <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              Alaeris
+              Alaeris - Full Stack Developer
+            </Text>
+            <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"gold"}>
+              2022 - Today
             </Text>
             <Text
               fontFamily={"Cormorant"}
@@ -160,18 +163,27 @@ const Home: React.FC<HomeProps> = props => {
               marginTop={"2rem"}
               color={"white"}
             >
-              As a full stack developer for at Alaeris I had the opportunity to
-              work with some of the industry's top personel. Our team consisted
-              of founding mechinical engineers from Scoot (now known as Bird),
-              artists that drew for popular Nikeloden shows from the 90's and
-              2000's, developers that helped design Orbitz's web app, UI/UX
-              designers from video games creator EA, and backend developers that
-              scaled the mobile app Calm from round one funding. Together we
-              have been working to secure funding for our mission of creating a
-              carbon negative crypto currency called the Alaeris Token. It was
-              my privilege to design the Alaeris landing page, email collection
-              page, as well as participate in a creative and business capacity
-              building the company from the ground up.
+              As a full stack developer at Alaeris I had the opportunity to work
+              with some of the industry's top personel. Our team consisted of
+              founding mechinical engineers from Scoot (now known as Bird),
+              artists that drew for the popular Nikeloden shows Hey Arnold and
+              Invader Zim, developers that helped design the Orbitz web app,
+              UI/UX designers from video games creator EA, and backend
+              developers that scaled the mobile app Calm from round one funding.
+              Together we have been working to secure funding for our mission of
+              creating a carbon negative crypto currency called the Alaeris
+              Token. It was my privilege to design the Alaeris landing page,
+              email collection page, as well as participate in a creative and
+              business capacity building the company from the ground up.
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+              _hover={{ color: "lightblue" }}
+            >
+              <a href="https://www.alaeris.com">Aleris.com</a>
             </Text>
           </Box>
           <Box
@@ -181,7 +193,10 @@ const Home: React.FC<HomeProps> = props => {
             marginTop={{ base: "2rem", md: "0" }}
           >
             <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
-              WWC
+              WWC - Full Stack Developer
+            </Text>
+            <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"gold"}>
+              2021 - 2022
             </Text>
             <Text
               fontFamily={"Cormorant"}
@@ -189,18 +204,123 @@ const Home: React.FC<HomeProps> = props => {
               marginTop={"2rem"}
               color={"white"}
             >
-              As a full stack developer for at Alaeris I had the opportunity to
-              work with some of the industry's top personel. Our team consisted
-              of founding mechinical engineers from Scoot (now known as Bird),
-              artists that drew for popular Nikeloden shows from the 90's and
-              2000's, developers that helped design Orbitz's web app, UI/UX
-              designers from video games creator EA, and backend developers that
-              scaled the mobile app Calm from round one funding. Together we
-              have been working to secure funding for our mission of creating a
-              carbon negative crypto currency called the Alaeris Token. It was
-              my privilege to design the Alaeris landing page, email collection
-              page, as well as participate in a creative and business capacity
-              building the company from the ground up.
+              My time as a full stack developer at WinningWithChase LLC provided
+              me with a chance to get my hands on a myriad of web projects
+              ranging from landing pages to social media sites. My favorite
+              projects to work on were Vomux and Zipti. For Vomux I was tasked
+              with implementing the front end UI, adding auto-complete search
+              functionality to the pages, and adding the code runner to complie,
+              run, and display the code that the user would write. For Zipti I
+              was employed to build the front end UI, handle input and display
+              operations for the "ask event" system architecture, and deal with
+              uploading and cropping photos and videos in both the profile view
+              of the site as well as the conversation chat flow that the users
+              would interact with.
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+              _hover={{ color: "lightblue" }}
+            >
+              <a href="https://www.winningwithchase.com">
+                WinningWithChase.com
+              </a>
+            </Text>
+          </Box>
+        </Box>
+        <Box width={"100%"} backgroundColor={"black"}>
+          <Text
+            marginTop={{ base: "2rem", md: "2rem" }}
+            padding="2rem"
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+          >
+            Projects
+          </Text>
+        </Box>
+        <Box
+          backgroundColor={"black"}
+          width={"100%"}
+          paddingTop={"1rem"}
+          paddingInline="2rem"
+          display={"flex"}
+          justifyContent={"space-between"}
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Box
+            width={{ base: "100%", md: "48.5%" }}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+              Fuckle
+            </Text>
+            <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"gold"}>
+              Wordle, but with cuss words
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+            >
+              What started off as a joke with my friends turned into a full
+              blown web app with google analytics and users from all over the world.
+              Fuckle is a knock off of the famous New York Times game Wordle,
+              but instead of five letter words it will instead give the user
+              four letter cuss words. It has a much better UI/UX than wordle,
+              great animations and color schemes, and keeps track of the user's
+              statistics using their browser's local storage.
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+              _hover={{ color: "lightblue" }}
+            >
+              <a href="https://www.fucklegame.com">Fucklegame.com</a>
+            </Text>
+          </Box>
+          <Box
+            width={{ base: "100%", md: "48.5%" }}
+            display={"flex"}
+            flexDirection={"column"}
+            marginTop={{ base: "2rem", md: "0" }}
+          >
+            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+              Nesh
+            </Text>
+            <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"gold"}>
+              Don't forget your licks
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+            >
+              Nesh is a guitar tabliture generator that allows the user to
+              create, edit and export their tabs to a PDF to be shared with
+              their fellow band mates. Nesh uses clever string to array
+              conversion and manipulation of React components to generate the
+              user's tab into an editable sheet. It then uses a third party
+              JavaScript library to export their newly created tab sheet into a
+              PDF and save it to their device.
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+              _hover={{ color: "lightblue" }}
+            >
+              <a href="https://www.youtube.com/watch?v=tYPU5ojet_g">
+                Watch Nesh Exibition Video
+              </a>
             </Text>
           </Box>
         </Box>
@@ -270,6 +390,7 @@ const Home: React.FC<HomeProps> = props => {
                     }}
                   />
                   <Button
+                    _hover={{ backgroundColor: "lightblue" }}
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
                     onClick={() => {
@@ -350,6 +471,7 @@ const Home: React.FC<HomeProps> = props => {
                     }}
                   />
                   <Button
+                    _hover={{ backgroundColor: "lightblue" }}
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
                     onClick={() => {
@@ -429,6 +551,7 @@ const Home: React.FC<HomeProps> = props => {
                     }}
                   />
                   <Button
+                    _hover={{ backgroundColor: "lightblue" }}
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
                     onClick={() => {
@@ -505,6 +628,7 @@ const Home: React.FC<HomeProps> = props => {
                     }}
                   />
                   <Button
+                    _hover={{ backgroundColor: "lightblue" }}
                     width="50vw"
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
@@ -543,6 +667,7 @@ const Home: React.FC<HomeProps> = props => {
                     }}
                   />
                   <Button
+                    _hover={{ backgroundColor: "lightblue" }}
                     width="50vw"
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
