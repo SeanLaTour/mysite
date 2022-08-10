@@ -251,9 +251,45 @@ const Home: React.FC<HomeProps> = props => {
           flexDirection={{ base: "column", md: "row" }}
         >
           <Box
-            width={{ base: "100%", md: "48.5%" }}
+            width={{ base: "100%", md: "30%" }}
             display={"flex"}
             flexDirection={"column"}
+          >
+            <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+              Opalite
+            </Text>
+            <Text fontFamily={"Cormorant"} fontSize={"1rem"} color={"gold"}>
+              Converting media into NFTs
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+            >
+              Opalite is a side project that was done with many members of the
+              Alaeris team. Opalite takes the user's social media and
+              transform's their profiles into collections of NFTs. My subsection
+              of the project was building the front end UI for the web
+              application, adding input validation, image and video selction
+              logic for uploading collections, and updating and displaying user
+              profiles that communicated with the Opalite API.
+            </Text>
+            <Text
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              marginTop={"2rem"}
+              color={"white"}
+              _hover={{ color: "lightblue" }}
+            >
+              <a href="https://www.opalite.io">Opalite.io</a>
+            </Text>
+          </Box>
+          <Box
+            width={{ base: "100%", md: "30%" }}
+            display={"flex"}
+            flexDirection={"column"}
+            marginTop={{ base: "2rem", md: "0" }}
           >
             <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
               Fuckle
@@ -268,12 +304,12 @@ const Home: React.FC<HomeProps> = props => {
               color={"white"}
             >
               What started off as a joke with my friends turned into a full
-              blown web app with google analytics and users from all over the world.
-              Fuckle is a knock off of the famous New York Times game Wordle,
-              but instead of five letter words it will instead give the user
-              four letter cuss words. It has a much better UI/UX than wordle,
-              great animations and color schemes, and keeps track of the user's
-              statistics using their browser's local storage.
+              blown web app with google analytics and users from all over the
+              world. Fuckle is a knock off of the famous New York Times game
+              Wordle, but instead of five letter words it will instead give the
+              user four letter cuss words. It has a much better UI/UX than
+              wordle, great animations and color schemes, and keeps track of the
+              user's statistics using their browser's local storage.
             </Text>
             <Text
               fontFamily={"Cormorant"}
@@ -286,7 +322,7 @@ const Home: React.FC<HomeProps> = props => {
             </Text>
           </Box>
           <Box
-            width={{ base: "100%", md: "48.5%" }}
+            width={{ base: "100%", md: "30%" }}
             display={"flex"}
             flexDirection={"column"}
             marginTop={{ base: "2rem", md: "0" }}
