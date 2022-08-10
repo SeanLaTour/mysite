@@ -2,6 +2,14 @@ import { Box, Button, Divider, Image, Input, Text } from "@chakra-ui/react"
 import React from "react"
 import { useState } from "react"
 import { fib, mergeSort, romanToInt, BST } from "./shared/functions"
+import {
+  DiCss3,
+  DiHtml5,
+  DiJavascript1,
+  DiNodejsSmall,
+  DiPython,
+  DiReact,
+} from "react-icons/di"
 
 interface HomeProps {}
 
@@ -394,6 +402,108 @@ const Home: React.FC<HomeProps> = props => {
             fontSize={"2rem"}
             color={"gold"}
           >
+            Technologies
+          </Text>
+        </Box>
+        <Box
+          justifyContent={{ base: "center", md: "space-between" }}
+          display={"flex"}
+          flexDirection={{ base: "column", md: "row" }}
+          padding={"2rem"}
+          width={"100%"}
+          paddingInline={"4rem"}
+          backgroundColor={"black"}
+        >
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              React
+            </Text>
+            <DiReact color="white" width={"2rem"} />
+          </Box>
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              JavaScript
+            </Text>
+            <DiJavascript1 color="white" width={"2rem"} />
+          </Box>
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              Node
+            </Text>
+            <DiNodejsSmall color="white" width={"2rem"} />
+          </Box>
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              Python
+            </Text>
+            <DiPython color="white" width={"2rem"} />
+          </Box>
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              HTML
+            </Text>
+            <DiHtml5 color="white" width={"2rem"} />
+          </Box>
+          <Box alignItems={"center"} display={"flex"} flexDirection={"row"}>
+            <Text
+              marginRight={".25rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1rem"}
+              color={"white"}
+              padding="1rem"
+            >
+              CSS
+            </Text>
+            <DiCss3 color="white" width={"2rem"} />
+          </Box>
+        </Box>
+
+        <Box width={"100%"} backgroundColor={"black"}>
+          <Box
+            display={"flex"}
+            padding="2rem"
+            justifyContent="center"
+            width={"100vw"}
+          >
+            <Divider marginTop={"2rem"} color="white" />
+          </Box>
+          <Text
+            marginTop={{ base: "1rem", md: "1rem" }}
+            padding="2rem"
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+          >
             Data Structures and Algorithms
           </Text>
         </Box>
@@ -536,8 +646,8 @@ const Home: React.FC<HomeProps> = props => {
                     borderLeftRadius={"0"}
                     backgroundColor={"gold"}
                     onClick={() => {
-                      if (Number(fibInput) > 1000) {
-                        setFibText("Number cannot be higher than 1000")
+                      if (Number(fibInput) > 100) {
+                        setFibText("Number cannot be higher than 100")
                         return
                       }
                       setFibText(`${BigInt(fib(1, Number(fibInput) - 1))}`)
