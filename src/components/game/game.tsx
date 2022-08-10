@@ -247,23 +247,22 @@ const Game: React.FC<GameProps> = props => {
       setGameBoard(tempGameBoard)
       element.innerHTML = "O"
     }
-    console.log(gameBoard)
   }
 
   return (
-    <Box paddingBlock={"1rem"} backgroundColor={"black"}>
+    <Box width={"100%"} paddingBlock={"1rem"} paddingInline={"2rem"} backgroundColor={"black"}>
       <Divider marginTop={"2rem"} color="white" />
 
       <Box
         display={"flex"}
         flexDirection={{ base: "column", md: "row" }}
         padding="2rem"
-        width={"100vw"}
+        width={"100%"}
         backgroundColor={"black"}
         color="gold"
         height={{ base: "100%", md: "32rem" }}
       >
-        <Box width={{ base: "100%", md: "50vw" }}>
+        <Box width={{ base: "100%", md: "45vw" }}>
           <Text
             marginTop="1rem"
             fontFamily={"Cormorant"}
