@@ -59,19 +59,82 @@ const Home: React.FC<HomeProps> = props => {
           paddingInline="2rem"
           textAlign={"left"}
         >
-          <Text fontFamily={"Cormorant"} fontSize={"1.5rem"} color={"gold"}>
+          <Text
+            marginTop={{ base: "0", md: "5rem" }}
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+            marginBottom={"1rem"}
+          >
             About Me
           </Text>
-          <Text
-            marginTop={"1rem"}
-            fontFamily={"Cormorant"}
-            fontSize={"1rem"}
-            color={"white"}
+          <Box
+            display={"flex"}
+            justifyContent={"space-between"}
+            flexDirection={{ base: "column", md: "row" }}
           >
-            I am a front end developer with experience working with React,
-            Javascript, HTML and CSS. I have worked primarily with startups and
-            consulting companies on projects that range from small web apps to
-            full-blown social media sites.
+            <Box
+              width={{ base: "100%", md: "48.5%" }}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Text
+                marginTop={{ base: "2rem", md: "3rem" }}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"gold"}
+              >
+                Professional
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                I am a front end developer with two years of experience working
+                with React, Javascript, HTML and CSS. I have worked primarily
+                with startups and consulting companies on projects that range
+                from small web apps to full-blown social media sites.
+              </Text>
+            </Box>
+            <Box
+              width={{ base: "100%", md: "48.5%" }}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Text
+                marginTop={{ base: "2rem", md: "3rem" }}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"gold"}
+              >
+                Personal
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+              >
+                At my core I am an artist. I am a musician, I play guitar, bass,
+                piano and drums, combining these to compose my own songs. I am a
+                writer, having been published for my poetry. And of course I am
+                a developer, enjoying creating games and dissecting the how my
+                favortie games are designed and how they function.
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+        <Box width={"100%"} backgroundColor={"black"}>
+          <Text
+            marginTop={{ base: "2rem", md: "2rem" }}
+            padding="2rem"
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+          >
+            Data Structures and Algorithms
           </Text>
         </Box>
         <Box display={"flex"} flexDirection={{ base: "column", md: "row" }}>
