@@ -1,4 +1,4 @@
-import { Box, Button, Image, Input, Text } from "@chakra-ui/react"
+import { Box, Button, Divider, Image, Input, Text } from "@chakra-ui/react"
 import React from "react"
 import { useState } from "react"
 import { fib, mergeSort, romanToInt, BST } from "./shared/functions"
@@ -127,8 +127,16 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
         </Box>
         <Box width={"100%"} backgroundColor={"black"}>
+          <Box
+            display={"flex"}
+            padding="2rem"
+            justifyContent="center"
+            width={"100vw"}
+          >
+            <Divider marginTop={"2rem"} color="white" />
+          </Box>
           <Text
-            marginTop={{ base: "2rem", md: "2rem" }}
+            marginTop={{ base: "1rem", md: "1rem" }}
             padding="2rem"
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
@@ -137,6 +145,7 @@ const Home: React.FC<HomeProps> = props => {
             Career
           </Text>
         </Box>
+
         <Box
           backgroundColor={"black"}
           width={"100%"}
@@ -231,8 +240,16 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
         </Box>
         <Box width={"100%"} backgroundColor={"black"}>
+          <Box
+            display={"flex"}
+            padding="2rem"
+            justifyContent="center"
+            width={"100vw"}
+          >
+            <Divider marginTop={"2rem"} color="white" />
+          </Box>
           <Text
-            marginTop={{ base: "2rem", md: "2rem" }}
+            marginTop={{ base: "1rem", md: "1rem" }}
             padding="2rem"
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
@@ -362,8 +379,16 @@ const Home: React.FC<HomeProps> = props => {
         </Box>
 
         <Box width={"100%"} backgroundColor={"black"}>
+          <Box
+            display={"flex"}
+            padding="2rem"
+            justifyContent="center"
+            width={"100vw"}
+          >
+            <Divider marginTop={"2rem"} color="white" />
+          </Box>
           <Text
-            marginTop={{ base: "2rem", md: "2rem" }}
+            marginTop={{ base: "1rem", md: "1rem" }}
             padding="2rem"
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
