@@ -10,6 +10,7 @@ import {
   DiPython,
   DiReact,
 } from "react-icons/di"
+import Game from "./game/game"
 
 interface HomeProps {}
 
@@ -288,7 +289,7 @@ const Home: React.FC<HomeProps> = props => {
               ranging from landing pages to social media sites. My favorite
               projects to work on were Vomux and Zipti. For Vomux I was tasked
               with implementing the front end UI, adding auto-complete search
-              functionality to the pages, and adding the code runner to complie,
+              functionality to the pages, and adding the code runner to compile,
               run, and display the code that the user would write. For Zipti I
               was employed to build the front end UI, handle input and display
               operations for the "ask event" system architecture, and deal with
@@ -962,6 +963,8 @@ const Home: React.FC<HomeProps> = props => {
             </Box>
           </Box>
         </Box>
+
+        <Game />
       </Box>
     </Box>
   )
