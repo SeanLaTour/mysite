@@ -63,16 +63,77 @@ const Home: React.FC<HomeProps> = props => {
           display={"flex"}
           justifyContent={"center"}
           flexDirection={"column"}
-          marginTop={"5vh"}
+          marginTop={{ base: "-3vh", md: "5vh" }}
           paddingInline="2rem"
           textAlign={"left"}
         >
+          <Box>
+            <Box
+              paddingTop={"2rem"}
+              paddingInline={{ base: "2rem", md: "25%" }}
+              justifyContent={"space-between"}
+              width={{ base: "100%" }}
+              display={"flex"}
+              flexDirection={"row"}
+            >
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#about-me">About Me</a>
+              </Text>
+
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#career">Career</a>
+              </Text>
+
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#projects">Projects</a>
+              </Text>
+
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#technologies">Technologies</a>
+              </Text>
+
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#dsa">DSA</a>
+              </Text>
+            </Box>
+          </Box>
           <Text
-            marginTop={{ base: "0", md: "5rem" }}
+            marginTop={{ base: "2rem", md: "5rem" }}
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
             marginBottom={"1rem"}
+            id="about-me"
           >
             About Me
           </Text>
@@ -149,6 +210,7 @@ const Home: React.FC<HomeProps> = props => {
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
+            id="career"
           >
             Career
           </Text>
@@ -262,6 +324,7 @@ const Home: React.FC<HomeProps> = props => {
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
+            id="projects"
           >
             Projects
           </Text>
@@ -401,6 +464,7 @@ const Home: React.FC<HomeProps> = props => {
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
+            id="technologies"
           >
             Technologies
           </Text>
@@ -503,6 +567,7 @@ const Home: React.FC<HomeProps> = props => {
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
+            id="dsa"
           >
             Data Structures and Algorithms
           </Text>
