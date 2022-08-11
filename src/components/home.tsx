@@ -11,6 +11,7 @@ import {
   DiReact,
 } from "react-icons/di"
 import Game from "./game/game"
+import { navigate } from "gatsby"
 
 interface HomeProps {}
 
@@ -577,7 +578,7 @@ const Home: React.FC<HomeProps> = props => {
         <Box display={"flex"} flexDirection={{ base: "column", lg: "row" }}>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", lg: "33rem" }}
+            height={{ base: "100%", lg: "36rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
@@ -599,6 +600,15 @@ const Home: React.FC<HomeProps> = props => {
                 operations concerned with modification and parsing of strings to
                 use and change its data. This function will translate any valid
                 Roman numeral you input into its modern equivalent.
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+                onClick={() => navigate("/code_editor/roman")}
+              >
+                View Code
               </Text>
             </Box>
             <Box>
@@ -655,7 +665,7 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", lg: "33rem" }}
+            height={{ base: "100%", lg: "36rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
@@ -736,7 +746,7 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", lg: "33rem" }}
+            height={{ base: "100%", lg: "36rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}
@@ -812,7 +822,7 @@ const Home: React.FC<HomeProps> = props => {
           </Box>
           <Box
             backgroundColor={"black"}
-            height={{ base: "100%", lg: "33rem" }}
+            height={{ base: "100%", lg: "36rem" }}
             display={"flex"}
             justifyContent={{ base: "center", md: "space-between" }}
             padding={"2rem"}

@@ -108,17 +108,16 @@ const Game: React.FC<GameProps> = props => {
       tempGameBoard[1][2] = 2
       setGameBoard(tempGameBoard)
       element.innerHTML = "O"
-    }
-    else if (
-        board[2][2] === board[1][1] &&
-        board[0][0] === 0 &&
-        board[2][2] !== 0
-      ) {
-        const element = document.getElementById(`00`)
-        tempGameBoard[0][0] = 2
-        setGameBoard(tempGameBoard)
-        element.innerHTML = "O"
-      } else if (
+    } else if (
+      board[2][2] === board[1][1] &&
+      board[0][0] === 0 &&
+      board[2][2] !== 0
+    ) {
+      const element = document.getElementById(`00`)
+      tempGameBoard[0][0] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
       board[1][2] === board[1][1] &&
       board[1][0] === 0 &&
       board[1][2] !== 0
