@@ -8,7 +8,7 @@ import { Box, Button, Text } from "@chakra-ui/react"
 import { navigate } from "gatsby"
 
 function CodeEditor() {
-  const url = window.location.href
+  const url = typeof window !== 'undefined' ? window.location.href : ""
   console.log(url)
 
   const [result, setResult] = React.useState({ name: "", code: "" })
