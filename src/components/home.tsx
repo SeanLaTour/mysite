@@ -606,6 +606,7 @@ const Home: React.FC<HomeProps> = props => {
                 fontFamily={"Cormorant"}
                 fontSize={"1rem"}
                 color={"white"}
+                _hover={{ color: "lightblue", cursor: "pointer" }}
                 onClick={() => navigate("/code_editor/roman")}
               >
                 View Code
@@ -690,6 +691,16 @@ const Home: React.FC<HomeProps> = props => {
                 sequence, using the number inputted by you as its stopping
                 condition.
               </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+                _hover={{ color: "lightblue", cursor: "pointer" }}
+                onClick={() => navigate("/code_editor/fib")}
+              >
+                View Code
+              </Text>
             </Box>
             <Box>
               <Text
@@ -770,6 +781,16 @@ const Home: React.FC<HomeProps> = props => {
                 algorithm to sort all the individual numbers you input into
                 ascending order.
               </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+                _hover={{ color: "lightblue", cursor: "pointer" }}
+                onClick={() => navigate("/code_editor/sort")}
+              >
+                View Code
+              </Text>
             </Box>
             <Box>
               <Text
@@ -846,6 +867,16 @@ const Home: React.FC<HomeProps> = props => {
                 than the node’s key. The left and right subtree each must also
                 be a binary search tree. The function below allows you to create
                 and search your own BST.
+              </Text>
+              <Text
+                marginTop={"1rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+                _hover={{ color: "lightblue", cursor: "pointer" }}
+                onClick={() => navigate("/code_editor/bst")}
+              >
+                View Code
               </Text>
             </Box>
             <Box>
