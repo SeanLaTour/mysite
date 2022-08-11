@@ -1,11 +1,5 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Text,
-  useEventListenerMap,
-} from "@chakra-ui/react"
-import React, { useEffect, useState } from "react"
+import { Box, Button, Divider, Text } from "@chakra-ui/react"
+import React, { useState } from "react"
 
 interface GameProps {}
 
@@ -250,13 +244,18 @@ const Game: React.FC<GameProps> = props => {
   }
 
   return (
-    <Box width={"100%"} paddingBlock={"1rem"} paddingInline={"2rem"} backgroundColor={"black"}>
+    <Box
+      width={"100%"}
+      paddingBlock={"1rem"}
+      paddingInline={"2rem"}
+      backgroundColor={"black"}
+    >
       <Divider marginTop={"2rem"} color="white" />
 
       <Box
         display={"flex"}
         flexDirection={{ base: "column", md: "row" }}
-        padding="2rem"
+        paddingBlock="2rem"
         width={"100%"}
         backgroundColor={"black"}
         color="gold"
@@ -282,7 +281,7 @@ const Game: React.FC<GameProps> = props => {
             with for loops to determine the AI's next move and whether the game
             has been won, lost, or drawn. The layout was built using React
             components with inline styling and is responsive to desktop and
-            mobile. See if you're good enough to be the AI and get "tick tack
+            mobile. See if you're good enough to beat the AI and get "tick tack
             toe, three in a row!"
           </Text>
         </Box>
