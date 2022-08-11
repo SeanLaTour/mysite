@@ -108,7 +108,17 @@ const Game: React.FC<GameProps> = props => {
       tempGameBoard[1][2] = 2
       setGameBoard(tempGameBoard)
       element.innerHTML = "O"
-    } else if (
+    }
+    else if (
+        board[2][2] === board[1][1] &&
+        board[0][0] === 0 &&
+        board[2][2] !== 0
+      ) {
+        const element = document.getElementById(`00`)
+        tempGameBoard[0][0] = 2
+        setGameBoard(tempGameBoard)
+        element.innerHTML = "O"
+      } else if (
       board[1][2] === board[1][1] &&
       board[1][0] === 0 &&
       board[1][2] !== 0
@@ -277,7 +287,7 @@ const Game: React.FC<GameProps> = props => {
             color={"white"}
           >
             This game of tick tack toe operates using React's state management,
-            updating elements based off of ID's, and a 2D array that is checked
+            updating elements based off of ID's, and a 2d array that is checked
             with for loops to determine the AI's next move and whether the game
             has been won, lost, or drawn. The layout was built using React
             components with inline styling and is responsive to desktop and
