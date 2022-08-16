@@ -1103,7 +1103,7 @@ const Home: React.FC<HomeProps> = props => {
                   Name
                 </Text>
                 <Input
-                  placeholder="your name"
+                  placeholder="Your name"
                   marginBottom={".5rem"}
                   color={"white"}
                   width={"100%"}
@@ -1135,7 +1135,7 @@ const Home: React.FC<HomeProps> = props => {
                   Subject
                 </Text>
                 <Input
-                  placeholder="subject"
+                  placeholder="Subject"
                   marginBottom={".5rem"}
                   color={"white"}
                   width={"100%"}
