@@ -18,10 +18,12 @@ import {
   DiPython,
   DiReact,
 } from "react-icons/di"
+import { BsCheckCircleFill } from "react-icons/bs"
 import Game from "./game/game"
 import { navigate } from "gatsby"
 import profilePic from "../images/IMG_2010.jpg"
 import seaPic from "../images/20191229_164047.jpg"
+import emailjs from "emailjs-com"
 
 interface HomeProps {}
 
@@ -38,12 +40,32 @@ const Home: React.FC<HomeProps> = props => {
   const [currentBST, setCurrentBST] = useState([])
   const [currentBSTNumber, setCurrentBSTNumber] = useState([])
   const [displayPicture, setDisplayPicture] = useState("")
+  const [sentEmail, setSentEmail] = useState(false)
   const renderImage = width => {
     if (width >= 600) {
       setDisplayPicture(seaPic)
     } else {
       setDisplayPicture(profilePic)
     }
+  }
+
+  function sendEmail(e) {
+    e.preventDefault()
+    emailjs
+      .sendForm(
+        "service_7cznn7c",
+        "template_ck8cdf7",
+        e.target,
+        "JwrnauuumQQCCEDkG"
+      )
+      .then(
+        result => {
+          setSentEmail(true)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
   }
 
   useEffect(() => {
@@ -1058,7 +1080,7 @@ const Home: React.FC<HomeProps> = props => {
                 fontFamily={"Cormorant"}
                 fontSize={"1.5rem"}
                 color={"white"}
-                paddingRight={{base: "0", md: "4rem"}}
+                paddingRight={{ base: "0", md: "4rem" }}
               >
                 Feel free to contact me! I should get back to you in no more
                 than a day or two and we can set up a Zoom meeting or a phone
@@ -1068,51 +1090,88 @@ const Home: React.FC<HomeProps> = props => {
               </Text>
             </Box>
             <Box width={{ base: "100%", md: "48vw" }}>
-              <Text
-                marginTop={"2rem"}
-                fontFamily={"Cormorant"}
-                fontSize={"1.5rem"}
-                color={"white"}
-                marginBottom={".5rem"}
-              >
-                Name
-              </Text>
-              <Input
-                placeholder="Your name"
-                marginBottom={".5rem"}
-                color={"white"}
-                width={"100%"}
-              />
-              <Text
-                marginTop={"2rem"}
-                fontFamily={"Cormorant"}
-                fontSize={"1.5rem"}
-                color={"white"}
-                marginBottom={".5rem"}
-              >
-                Email
-              </Text>
-              <Input
-                placeholder="your_email@email.com"
-                marginBottom={".5rem"}
-                color={"white"}
-                width={"100%"}
-              />
-              <Text
-                marginTop={"2rem"}
-                fontFamily={"Cormorant"}
-                fontSize={"1.5rem"}
-                color={"white"}
-                marginBottom={".5rem"}
-              >
-                Message
-              </Text>
-              <Textarea
-                placeholder="Your message..."
-                marginBottom={".5rem"}
-                color={"white"}
-                width={"100%"}
-              />
+              <form className="contact-form" onSubmit={sendEmail}>
+                <Text
+                  marginTop={"2rem"}
+                  fontFamily={"Cormorant"}
+                  fontSize={"1.5rem"}
+                  color={"gold"}
+                  marginBottom={".5rem"}
+                >
+                  Name
+                </Text>
+                <Input
+                  placeholder="your name"
+                  marginBottom={".5rem"}
+                  color={"white"}
+                  width={"100%"}
+                  name="from_name"
+                />
+                <Text
+                  marginTop={"2rem"}
+                  fontFamily={"Cormorant"}
+                  fontSize={"1.5rem"}
+                  color={"gold"}
+                  marginBottom={".5rem"}
+                >
+                  Email
+                </Text>
+                <Input
+                  placeholder="your_email@email.com"
+                  marginBottom={".5rem"}
+                  color={"white"}
+                  width={"100%"}
+                  name="from_email"
+                />
+                <Text
+                  marginTop={"2rem"}
+                  fontFamily={"Cormorant"}
+                  fontSize={"1.5rem"}
+                  color={"gold"}
+                  marginBottom={".5rem"}
+                >
+                  Subject
+                </Text>
+                <Input
+                  placeholder="subject"
+                  marginBottom={".5rem"}
+                  color={"white"}
+                  width={"100%"}
+                  name="message"
+                />
+                <Text
+                  marginTop={"2rem"}
+                  fontFamily={"Cormorant"}
+                  fontSize={"1.5rem"}
+                  color={"gold"}
+                  marginBottom={".5rem"}
+                >
+                  Message
+                </Text>
+                <Textarea
+                  placeholder="Your message..."
+                  marginBottom={".5rem"}
+                  color={"white"}
+                  width={"100%"}
+                  name="html_message"
+                />
+                <Box
+                  marginTop={".5rem"}
+                  alignItems={"center"}
+                  display={"flex"}
+                  flexDirection={"row"}
+                >
+                  <Button
+                    disabled={sentEmail ? true : false}
+                    backgroundColor={"gold"}
+                    marginRight={"1rem"}
+                    type="submit"
+                  >
+                    {sentEmail ? "Sent!" : "Send"}
+                  </Button>
+                  {sentEmail ? <BsCheckCircleFill color="green" /> : ""}
+                </Box>
+              </form>
             </Box>
           </Box>
         </Box>
