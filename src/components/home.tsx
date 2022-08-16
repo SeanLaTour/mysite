@@ -137,7 +137,7 @@ const Home: React.FC<HomeProps> = props => {
                 marginBottom={"1rem"}
                 _hover={{ color: "lightblue" }}
               >
-                <a href="#about-me">About Me</a>
+                <a href="#contact">Contact</a>
               </Text>
 
               <Text
@@ -1070,6 +1070,7 @@ const Home: React.FC<HomeProps> = props => {
             fontFamily={"Cormorant"}
             fontSize={"2rem"}
             color={"gold"}
+            id="contact"
           >
             Contact Me
           </Text>
