@@ -19,7 +19,7 @@ interface HomeProps {}
 
 const Home: React.FC<HomeProps> = props => {
   const windowWidth =
-    typeof window.innerWidth !== "undefined" ? window.innerWidth : "null"
+    typeof window !== "undefined" ? window.innerWidth : "null"
   const [romanNumeralText, setRomanNumeralText] = useState("")
   const [romanNumeralInput, setRomanNumeralInput] = useState("")
   const [fibText, setFibText] = useState("")
