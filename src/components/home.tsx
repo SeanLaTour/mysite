@@ -12,10 +12,14 @@ import {
 } from "react-icons/di"
 import Game from "./game/game"
 import { navigate } from "gatsby"
+import profilePic from "../images/IMG_2010.jpg"
+import seaPic from "../images/20191229_164047.jpg"
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = props => {
+  const windowWidth =
+    typeof window.innerWidth !== "undefined" ? window.innerWidth : "null"
   const [romanNumeralText, setRomanNumeralText] = useState("")
   const [romanNumeralInput, setRomanNumeralInput] = useState("")
   const [fibText, setFibText] = useState("")
@@ -26,6 +30,14 @@ const Home: React.FC<HomeProps> = props => {
   const [BSTSearch, setBSTSearch] = useState("")
   const [currentBST, setCurrentBST] = useState([])
   const [currentBSTNumber, setCurrentBSTNumber] = useState([])
+  const renderImage = width => {
+    console.log(width)
+    if (width >= 600) {
+      return seaPic
+    } else {
+      return profilePic
+    }
+  }
 
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
@@ -34,7 +46,7 @@ const Home: React.FC<HomeProps> = props => {
         top={"0"}
         left={"0"}
         width="100%"
-        src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=800"
+        src={renderImage(windowWidth)}
       />
       <Box
         position={"absolute"}
@@ -42,10 +54,16 @@ const Home: React.FC<HomeProps> = props => {
         width={"100%"}
         display={"flex"}
         justifyContent={"center"}
-        alignItems={"center"}
+        alignItems={{ base: "center", lg: "flex-start" }}
         flexDirection={"column"}
       >
-        <Text fontFamily={"Cormorant"} fontSize={"3rem"} color={"white"}>
+        <Text
+          paddingLeft={{ base: "0", lg: "2rem" }}
+          textAlign={"center"}
+          fontFamily={"Cormorant"}
+          fontSize={"3rem"}
+          color={"white"}
+        >
           Sean La Tourette
         </Text>
         <Text
@@ -54,7 +72,8 @@ const Home: React.FC<HomeProps> = props => {
           marginTop={".5vh"}
           fontSize={"1.5rem"}
           color={"gold"}
-          padding="2rem"
+          paddingBottom={"2rem"}
+          paddingLeft={{ base: "0", lg: "2rem" }}
           paddingTop={"3vh"}
         >
           Web Design Never Looked This Good.
@@ -1006,6 +1025,41 @@ const Home: React.FC<HomeProps> = props => {
         </Box>
 
         <Game />
+        <Box
+          padding="2rem"
+          height={"100%"}
+          backgroundColor={"black"}
+          width="100%"
+        >
+          <Divider marginTop={"2rem"} color="white" />
+          <Text
+            marginTop={"2rem"}
+            fontFamily={"Cormorant"}
+            fontSize={"2rem"}
+            color={"gold"}
+          >
+            Contact Me
+          </Text>
+          <Box>
+            <Text
+              marginTop={"2rem"}
+              fontFamily={"Cormorant"}
+              fontSize={"1.5rem"}
+              color={"white"}
+            >
+              Name
+            </Text>
+            <Input
+              type={"number"}
+              marginBottom={".5rem"}
+              color={"white"}
+              width={"100%"}
+              onChange={e => {
+                setBSTSearch(e.target.value)
+              }}
+            />
+          </Box>
+        </Box>
       </Box>
     </Box>
   )

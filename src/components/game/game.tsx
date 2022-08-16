@@ -70,6 +70,12 @@ const Game: React.FC<GameProps> = props => {
         return true
       }
     }
+    if (board[0][0] === board[1][0] && board[1][0] === board[2][0]) {
+      if (board[0][0] !== 0 && board[1][0] !== 0 && board[2][0] !== 0) {
+        console.log("WIN")
+        return true
+      }
+    }
     const checkArray = []
     for (let i = 0; i < gameBoard.length; i++) {
       for (let j = 0; j < gameBoard[i].length; j++) {
