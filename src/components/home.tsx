@@ -130,15 +130,7 @@ const Home: React.FC<HomeProps> = props => {
               display={"flex"}
               flexDirection={"row"}
             >
-              <Text
-                fontFamily={"Cormorant"}
-                fontSize={{ base: ".75rem", md: "1rem" }}
-                color={"gold"}
-                marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
-              >
-                <a href="#contact">Contact</a>
-              </Text>
+  
 
               <Text
                 fontFamily={"Cormorant"}
@@ -178,6 +170,15 @@ const Home: React.FC<HomeProps> = props => {
                 _hover={{ color: "lightblue" }}
               >
                 <a href="#dsa">DSA</a>
+              </Text>
+              <Text
+                fontFamily={"Cormorant"}
+                fontSize={{ base: ".75rem", md: "1rem" }}
+                color={"gold"}
+                marginBottom={"1rem"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="#contact">Contact</a>
               </Text>
             </Box>
           </Box>
@@ -1163,6 +1164,7 @@ const Home: React.FC<HomeProps> = props => {
                   flexDirection={"row"}
                 >
                   <Button
+                  fontFamily={"Cormorant"}
                     disabled={sentEmail ? true : false}
                     backgroundColor={"gold"}
                     marginRight={"1rem"}

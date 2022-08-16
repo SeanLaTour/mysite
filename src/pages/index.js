@@ -6,11 +6,11 @@ import "../components/layout.css"
 
 const IndexPage = () => (
   <ChakraProvider>
-    <Seo title="Home" />
+    <Seo title="Web Design" />
     <Home />
   </ChakraProvider>
 )
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Sean La Tourette" />
 
 export default IndexPage
