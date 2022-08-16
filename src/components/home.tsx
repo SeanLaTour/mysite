@@ -1,4 +1,12 @@
-import { Box, Button, Divider, Image, Input, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Divider,
+  Image,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react"
 import React, { useEffect } from "react"
 import { useState } from "react"
 import { fib, mergeSort, romanToInt, BST } from "./shared/functions"
@@ -18,8 +26,7 @@ import seaPic from "../images/20191229_164047.jpg"
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = props => {
-  const windowWidth =
-    typeof window !== "undefined" ? window.innerWidth : "null"
+  const windowWidth = typeof window !== "undefined" ? window.innerWidth : "null"
   const [romanNumeralText, setRomanNumeralText] = useState("")
   const [romanNumeralInput, setRomanNumeralInput] = useState("")
   const [fibText, setFibText] = useState("")
@@ -41,7 +48,7 @@ const Home: React.FC<HomeProps> = props => {
 
   useEffect(() => {
     renderImage(windowWidth)
-  },[])
+  }, [])
 
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
@@ -1044,24 +1051,69 @@ const Home: React.FC<HomeProps> = props => {
           >
             Contact Me
           </Text>
-          <Box>
-            <Text
-              marginTop={"2rem"}
-              fontFamily={"Cormorant"}
-              fontSize={"1.5rem"}
-              color={"white"}
-            >
-              Name
-            </Text>
-            <Input
-              type={"number"}
-              marginBottom={".5rem"}
-              color={"white"}
-              width={"100%"}
-              onChange={e => {
-                setBSTSearch(e.target.value)
-              }}
-            />
+          <Box display={"flex"} flexDirection={{ base: "column", md: "row" }}>
+            <Box width={{ base: "100%", md: "48vw" }}>
+              <Text
+                marginTop={"2rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"white"}
+                paddingRight={{base: "0", md: "4rem"}}
+              >
+                Feel free to contact me! I should get back to you in no more
+                than a day or two and we can set up a Zoom meeting or a phone
+                call. I'm happy to discuss any and all projects related to front
+                end and full stack web development. I am eager to start your
+                next project with you and look forward to your email!
+              </Text>
+            </Box>
+            <Box width={{ base: "100%", md: "48vw" }}>
+              <Text
+                marginTop={"2rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"white"}
+                marginBottom={".5rem"}
+              >
+                Name
+              </Text>
+              <Input
+                placeholder="Your name"
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+              />
+              <Text
+                marginTop={"2rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"white"}
+                marginBottom={".5rem"}
+              >
+                Email
+              </Text>
+              <Input
+                placeholder="your_email@email.com"
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+              />
+              <Text
+                marginTop={"2rem"}
+                fontFamily={"Cormorant"}
+                fontSize={"1.5rem"}
+                color={"white"}
+                marginBottom={".5rem"}
+              >
+                Message
+              </Text>
+              <Textarea
+                placeholder="Your message..."
+                marginBottom={".5rem"}
+                color={"white"}
+                width={"100%"}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
