@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Image, Input, Text } from "@chakra-ui/react"
-import React from "react"
+import React, { useEffect } from "react"
 import { useState } from "react"
 import { fib, mergeSort, romanToInt, BST } from "./shared/functions"
 import {
@@ -30,14 +30,18 @@ const Home: React.FC<HomeProps> = props => {
   const [BSTSearch, setBSTSearch] = useState("")
   const [currentBST, setCurrentBST] = useState([])
   const [currentBSTNumber, setCurrentBSTNumber] = useState([])
+  const [displayPicture, setDisplayPicture] = useState("")
   const renderImage = width => {
-    console.log(width)
     if (width >= 600) {
-      return seaPic
+      setDisplayPicture(seaPic)
     } else {
-      return profilePic
+      setDisplayPicture(profilePic)
     }
   }
+
+  useEffect(() => {
+    renderImage(windowWidth)
+  },[])
 
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
@@ -46,7 +50,7 @@ const Home: React.FC<HomeProps> = props => {
         top={"0"}
         left={"0"}
         width="100%"
-        src={renderImage(windowWidth)}
+        src={displayPicture}
       />
       <Box
         position={"absolute"}
