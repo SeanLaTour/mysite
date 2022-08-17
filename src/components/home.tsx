@@ -220,6 +220,17 @@ const Home: React.FC<HomeProps> = props => {
                 primarily with startups and consulting companies on projects
                 that range from small web apps to full-blown social media sites.
               </Text>
+              <Text
+                paddingTop="1rem"
+                fontFamily={"Cormorant"}
+                fontSize={"1rem"}
+                color={"white"}
+                _hover={{ color: "lightblue" }}
+              >
+                <a href="https://docs.google.com/document/d/15Gan4YnK55x3WPsdEIClWF6CHZx-p23K/edit?usp=sharing&ouid=108946654489576938158&rtpof=true&sd=true">
+                  View Resume
+                </a>
+              </Text>
             </Box>
             <Box
               width={{ base: "100%", md: "48.5%" }}
@@ -258,6 +269,7 @@ const Home: React.FC<HomeProps> = props => {
           >
             <Divider marginTop={"2rem"} color="white" />
           </Box>
+
           <Text
             marginTop={{ base: "1rem", md: "1rem" }}
             padding="2rem"
@@ -265,6 +277,7 @@ const Home: React.FC<HomeProps> = props => {
             fontSize={"2rem"}
             color={"gold"}
             id="career"
+            paddingRight={"1rem"}
           >
             Career
           </Text>
