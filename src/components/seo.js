@@ -31,7 +31,10 @@ function Seo({ description, title, children }) {
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
-      <meta name="keywords" content={`Sean La Tourette, Sean LaTourette, sean latourette, La Tourette, LaTourette, latourette, web, web design, front end, full stack, software`} />
+      <meta
+        name="keywords"
+        content={`Sean La Tourette, Sean LaTourette, sean latourette, La Tourette, LaTourette, latourette, web, web design, front end, full stack, software`}
+      />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />

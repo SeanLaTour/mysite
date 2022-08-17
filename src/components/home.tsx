@@ -103,9 +103,10 @@ const Home: React.FC<HomeProps> = props => {
           textAlign={"center"}
           fontFamily={"Cormorant"}
           marginTop={".5vh"}
-          fontSize={"1.5rem"}
+          fontSize={{ base: "1.25rem", md: "1.5rem" }}
           color={"gold"}
           paddingBottom={"2rem"}
+          // paddingInline={{base: "2rem", md: "0"}}
           paddingLeft={{ base: "0", lg: "2rem" }}
           paddingTop={"3vh"}
         >
@@ -130,8 +131,6 @@ const Home: React.FC<HomeProps> = props => {
               display={"flex"}
               flexDirection={"row"}
             >
-  
-
               <Text
                 fontFamily={"Cormorant"}
                 fontSize={{ base: ".75rem", md: "1rem" }}
@@ -1164,7 +1163,7 @@ const Home: React.FC<HomeProps> = props => {
                   flexDirection={"row"}
                 >
                   <Button
-                  fontFamily={"Cormorant"}
+                    fontFamily={"Cormorant"}
                     disabled={sentEmail ? true : false}
                     backgroundColor={"gold"}
                     marginRight={"1rem"}
