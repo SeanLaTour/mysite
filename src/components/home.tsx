@@ -216,9 +216,10 @@ const Home: React.FC<HomeProps> = props => {
                 color={"white"}
               >
                 I am a full stack developer with two years of experience working
-                with React, Express, JavaScript, TypeScript, HTML and CSS. I have worked
-                primarily with startups and consulting companies on projects
-                that range from small web apps to full-blown social media sites.
+                with React, Express, JavaScript, TypeScript, HTML and CSS. I
+                have worked primarily with startups and consulting companies on
+                projects that range from small web apps to full-blown social
+                media sites.
               </Text>
               <Text
                 paddingTop="1rem"
@@ -1122,7 +1123,7 @@ const Home: React.FC<HomeProps> = props => {
                   name="from_name"
                 />
                 <Text
-                  marginTop={"2rem"}
+                  marginTop={".5rem"}
                   fontFamily={"Cormorant"}
                   fontSize={"1.5rem"}
                   color={"gold"}
@@ -1138,7 +1139,7 @@ const Home: React.FC<HomeProps> = props => {
                   name="from_email"
                 />
                 <Text
-                  marginTop={"2rem"}
+                  marginTop={".5rem"}
                   fontFamily={"Cormorant"}
                   fontSize={"1.5rem"}
                   color={"gold"}
@@ -1154,7 +1155,7 @@ const Home: React.FC<HomeProps> = props => {
                   name="message"
                 />
                 <Text
-                  marginTop={"2rem"}
+                  marginTop={".5rem"}
                   fontFamily={"Cormorant"}
                   fontSize={"1.5rem"}
                   color={"gold"}

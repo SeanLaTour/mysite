@@ -330,7 +330,7 @@ const Game: React.FC<GameProps> = props => {
       <Box
         display={"flex"}
         flexDirection={{ base: "column", md: "row" }}
-        paddingBlock="2rem"
+        paddingTop="2rem"
         width={"100%"}
         backgroundColor={"black"}
         color="gold"
