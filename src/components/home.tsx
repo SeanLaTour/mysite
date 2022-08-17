@@ -1093,7 +1093,7 @@ const Home: React.FC<HomeProps> = props => {
               <Text
                 marginTop={"2rem"}
                 fontFamily={"Cormorant"}
-                fontSize={"1.5rem"}
+                fontSize={{ base: "1rem", md: "1.5rem" }}
                 color={"white"}
                 paddingRight={{ base: "0", md: "4rem" }}
               >
