@@ -215,8 +215,8 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={"1rem"}
                 color={"white"}
               >
-                I am a front end developer with two years of experience working
-                with React, JavaScript, TypeScript, HTML and CSS. I have worked
+                I am a full stack developer with two years of experience working
+                with React, Express, JavaScript, TypeScript, HTML and CSS. I have worked
                 primarily with startups and consulting companies on projects
                 that range from small web apps to full-blown social media sites.
               </Text>
