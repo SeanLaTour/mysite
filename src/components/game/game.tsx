@@ -103,6 +103,51 @@ const Game: React.FC<GameProps> = props => {
       setGameBoard(tempGameBoard)
       element.innerHTML = "O"
     } else if (
+      board[0][0] === board[0][2] &&
+      board[0][1] === 0 &&
+      board[0][2] !== 0
+    ) {
+      const element = document.getElementById(`01`)
+      tempGameBoard[0][1] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
+      board[0][0] === board[2][0] &&
+      board[1][0] === 0 &&
+      board[0][0] !== 0
+    ) {
+      const element = document.getElementById(`10`)
+      tempGameBoard[1][0] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
+      board[2][0] === board[2][2] &&
+      board[2][1] === 0 &&
+      board[2][2] !== 0
+    ) {
+      const element = document.getElementById(`21`)
+      tempGameBoard[2][1] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
+      board[0][2] === board[2][2] &&
+      board[1][2] === 0 &&
+      board[0][2] !== 0
+    ) {
+      const element = document.getElementById(`12`)
+      tempGameBoard[1][2] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
+      board[1][0] === board[1][2] &&
+      board[1][1] === 0 &&
+      board[1][2] !== 0
+    ) {
+      const element = document.getElementById(`11`)
+      tempGameBoard[1][1] = 2
+      setGameBoard(tempGameBoard)
+      element.innerHTML = "O"
+    } else if (
       board[0][2] === board[0][1] &&
       board[0][0] === 0 &&
       board[0][2] !== 0
