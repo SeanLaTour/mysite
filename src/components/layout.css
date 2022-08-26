@@ -4,3 +4,7 @@
     url(../components//shared/fonts/Cormorant-VariableFont_wght.ttf)
       format("truetype");
 }
+
+html {
+  scroll-behavior: smooth;
+}

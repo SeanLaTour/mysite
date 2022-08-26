@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  color,
   Divider,
   Image,
   Input,
@@ -106,7 +107,6 @@ const Home: React.FC<HomeProps> = props => {
           fontSize={{ base: "1.25rem", md: "1.5rem" }}
           color={"gold"}
           paddingBottom={"2rem"}
-          // paddingInline={{base: "2rem", md: "0"}}
           paddingLeft={{ base: "0", lg: "2rem" }}
           paddingTop={"3vh"}
         >
@@ -136,7 +136,12 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={{ base: ".75rem", md: "1rem" }}
                 color={"gold"}
                 marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
+                textAlign={"center"}
+                css={{
+                  transitionProperty: "color, font-size",
+                  transitionDuration: ".25s",
+                }}
+                _hover={{ color: "lightblue", fontSize: "1.25rem" }}
               >
                 <a href="#career">Career</a>
               </Text>
@@ -146,7 +151,12 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={{ base: ".75rem", md: "1rem" }}
                 color={"gold"}
                 marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
+                textAlign={"center"}
+                css={{
+                  transitionProperty: "color, font-size",
+                  transitionDuration: ".25s",
+                }}
+                _hover={{ color: "lightblue", fontSize: "1.25rem" }}
               >
                 <a href="#projects">Projects</a>
               </Text>
@@ -156,7 +166,12 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={{ base: ".75rem", md: "1rem" }}
                 color={"gold"}
                 marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
+                textAlign={"center"}
+                css={{
+                  transitionProperty: "color, font-size",
+                  transitionDuration: ".25s",
+                }}
+                _hover={{ color: "lightblue", fontSize: "1.25rem" }}
               >
                 <a href="#technologies">Technologies</a>
               </Text>
@@ -166,7 +181,12 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={{ base: ".75rem", md: "1rem" }}
                 color={"gold"}
                 marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
+                textAlign={"center"}
+                css={{
+                  transitionProperty: "color, font-size",
+                  transitionDuration: ".25s",
+                }}
+                _hover={{ color: "lightblue", fontSize: "1.25rem" }}
               >
                 <a href="#dsa">DSA</a>
               </Text>
@@ -175,7 +195,12 @@ const Home: React.FC<HomeProps> = props => {
                 fontSize={{ base: ".75rem", md: "1rem" }}
                 color={"gold"}
                 marginBottom={"1rem"}
-                _hover={{ color: "lightblue" }}
+                textAlign={"center"}
+                css={{
+                  transitionProperty: "color, font-size",
+                  transitionDuration: ".25s",
+                }}
+                _hover={{ color: "lightblue", fontSize: "1.25rem" }}
               >
                 <a href="#contact">Contact</a>
               </Text>
