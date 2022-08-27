@@ -76,6 +76,7 @@ const Home: React.FC<HomeProps> = props => {
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
       <Image
+      id="photo"
         position={"absolute"}
         top={"0"}
         left={"0"}
@@ -90,6 +91,7 @@ const Home: React.FC<HomeProps> = props => {
         justifyContent={"center"}
         alignItems={{ base: "center", lg: "flex-start" }}
         flexDirection={"column"}
+     
       >
         <Text
           paddingLeft={{ base: "0", lg: "2rem" }}
@@ -97,10 +99,12 @@ const Home: React.FC<HomeProps> = props => {
           fontFamily={"Cormorant"}
           fontSize={"3rem"}
           color={"white"}
+          id={"title-name"}
         >
           Sean La Tourette
         </Text>
         <Text
+        
           textAlign={"center"}
           fontFamily={"Cormorant"}
           marginTop={".5vh"}
@@ -109,6 +113,7 @@ const Home: React.FC<HomeProps> = props => {
           paddingBottom={"2rem"}
           paddingLeft={{ base: "0", lg: "2rem" }}
           paddingTop={"3vh"}
+          id={"title-slogan"}
         >
           Web Design Never Looked This Good.
         </Text>
@@ -142,6 +147,7 @@ const Home: React.FC<HomeProps> = props => {
                   transitionDuration: ".25s",
                 }}
                 _hover={{ color: "lightblue", fontSize: "1.25rem" }}
+                id="nav1"
               >
                 <a href="#career">Career</a>
               </Text>
@@ -157,6 +163,7 @@ const Home: React.FC<HomeProps> = props => {
                   transitionDuration: ".25s",
                 }}
                 _hover={{ color: "lightblue", fontSize: "1.25rem" }}
+                id="nav2"
               >
                 <a href="#projects">Projects</a>
               </Text>
@@ -172,6 +179,7 @@ const Home: React.FC<HomeProps> = props => {
                   transitionDuration: ".25s",
                 }}
                 _hover={{ color: "lightblue", fontSize: "1.25rem" }}
+                id="nav3"
               >
                 <a href="#technologies">Technologies</a>
               </Text>
@@ -187,6 +195,7 @@ const Home: React.FC<HomeProps> = props => {
                   transitionDuration: ".25s",
                 }}
                 _hover={{ color: "lightblue", fontSize: "1.25rem" }}
+                id="nav4"
               >
                 <a href="#dsa">DSA</a>
               </Text>
@@ -201,6 +210,7 @@ const Home: React.FC<HomeProps> = props => {
                   transitionDuration: ".25s",
                 }}
                 _hover={{ color: "lightblue", fontSize: "1.25rem" }}
+                id="nav5"
               >
                 <a href="#contact">Contact</a>
               </Text>
@@ -262,6 +272,7 @@ const Home: React.FC<HomeProps> = props => {
               width={{ base: "100%", md: "48.5%" }}
               display={"flex"}
               flexDirection={"column"}
+              
             >
               <Text
                 marginTop={{ base: "2rem", md: "3rem" }}

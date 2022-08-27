@@ -8,3 +8,86 @@
 html {
   scroll-behavior: smooth;
 }
+
+#title-name {
+  animation: fadeInLeft 1s;
+}
+
+#title-slogan {
+  opacity: 0;
+  animation: fadeInLeft 1s 1.2s ease forwards;
+}
+
+#photo {
+  animation: fadeIn .1s;
+}
+
+#nav1 {opacity: 0; animation: fadeInRight .5s 2.2s ease forwards}
+#nav2 {opacity: 0; animation: fadeInRight .5s 2.4s ease forwards}
+#nav3 {opacity: 0; animation: fadeInRight .5s 2.6s ease forwards}
+#nav4 {opacity: 0; animation: fadeInRight .5s 2.8s ease forwards}
+#nav5 {opacity: 0; animation: fadeInRight .5s 3s ease forwards}
+
+#body {
+  opacity: 0;
+  animation: fadeIn .5s 3s ease forwards
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+#title-name {
+  animation: fadeInBottom 1s;
+}
+
+#title-slogan {
+  opacity: 0;
+  animation: fadeInBottom 1s 1.2s ease forwards;
+}
+}
