@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Text } from "@chakra-ui/react"
+import { Box, Button, color, Divider, Text } from "@chakra-ui/react"
 import React, { useState } from "react"
 
 interface GameProps {}
@@ -327,12 +327,46 @@ const Game: React.FC<GameProps> = props => {
     }
   }
 
+  const gameSection =
+    typeof document !== "undefined"
+      ? document.getElementById("gamesection")
+      : null
+  const tictack =
+    typeof document !== "undefined" ? document.getElementById("ticktack") : null
+
+  if (gameSection) {
+    gameSection.addEventListener("mouseenter", async () => {
+      const opacity = Number(tictack.style.opacity)
+      if (opacity <= 1) {
+        const opaque = setInterval(() => {
+          const opacity = Number(tictack.style.opacity)
+          tictack.style.opacity = (opacity + 0.05).toString()
+          console.log(opacity)
+          if (opacity >= 1) clearInterval(opaque)
+        }, 50)
+      }
+    })
+
+    gameSection.addEventListener("mouseleave", async () => {
+      const opacity = Number(tictack.style.opacity)
+      if (opacity >= 0) {
+        const opaque = setInterval(() => {
+          const opacity = Number(tictack.style.opacity)
+          tictack.style.opacity = (opacity - 0.1).toString()
+          console.log(opacity)
+          if (opacity <= 0) clearInterval(opaque)
+        }, 50)
+      }
+    })
+  }
+
   return (
     <Box
       width={"100%"}
       paddingBlock={"1rem"}
       paddingInline={"2rem"}
       backgroundColor={"black"}
+      id="gamesection"
     >
       <Divider marginTop={"2rem"} color="white" />
 
@@ -376,6 +410,8 @@ const Game: React.FC<GameProps> = props => {
           width={{ base: "100%", md: "50vw" }}
           justifyContent={"center"}
           alignItems={"center"}
+          id="ticktack"
+          opacity={{ base: "1", md: "0" }}
         >
           <Box
             borderTopRadius={"10px"}

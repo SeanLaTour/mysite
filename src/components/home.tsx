@@ -76,7 +76,7 @@ const Home: React.FC<HomeProps> = props => {
   return (
     <Box backgroundColor="black" height={"300vh"} overflow={"scroll"}>
       <Image
-      id="photo"
+        id="photo"
         position={"absolute"}
         top={"0"}
         left={"0"}
@@ -91,7 +91,6 @@ const Home: React.FC<HomeProps> = props => {
         justifyContent={"center"}
         alignItems={{ base: "center", lg: "flex-start" }}
         flexDirection={"column"}
-     
       >
         <Text
           paddingLeft={{ base: "0", lg: "2rem" }}
@@ -104,7 +103,6 @@ const Home: React.FC<HomeProps> = props => {
           Sean La Tourette
         </Text>
         <Text
-        
           textAlign={"center"}
           fontFamily={"Cormorant"}
           marginTop={".5vh"}
@@ -272,7 +270,6 @@ const Home: React.FC<HomeProps> = props => {
               width={{ base: "100%", md: "48.5%" }}
               display={"flex"}
               flexDirection={"column"}
-              
             >
               <Text
                 marginTop={{ base: "2rem", md: "3rem" }}
