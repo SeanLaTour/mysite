@@ -12,7 +12,6 @@
     "canvas": "^2.9.3",
     "emailjs": "^4.0.1",
     "emailjs-com": "^3.2.0",
-    "face-api.js": "^0.22.2",
     "framer-motion": "^6.5.1",
     "gatsby": "^4.19.2",
     "gatsby-plugin-create-client-paths": "^4.9.0",
