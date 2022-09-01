@@ -9,8 +9,10 @@
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "canvas": "^2.9.3",
     "emailjs": "^4.0.1",
     "emailjs-com": "^3.2.0",
+    "face-api.js": "^0.22.2",
     "framer-motion": "^6.5.1",
     "gatsby": "^4.19.2",
     "gatsby-plugin-create-client-paths": "^4.9.0",
@@ -26,7 +28,9 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
-    "react-simple-code-editor": "^0.11.3"
+    "react-simple-code-editor": "^0.11.3",
+    "react-speech-recognition": "^3.9.1",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1"

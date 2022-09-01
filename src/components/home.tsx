@@ -25,6 +25,8 @@ import { navigate } from "gatsby"
 import profilePic from "../images/IMG_2010.jpg"
 import seaPic from "../images/20191229_164047.jpg"
 import emailjs from "emailjs-com"
+import FaceRec from "./facial_rec/facialRec"
+import Mic from "./facial_rec/facialRec"
 
 interface HomeProps {}
 
@@ -133,6 +135,7 @@ const Home: React.FC<HomeProps> = props => {
               width={{ base: "100%" }}
               display={"flex"}
               flexDirection={"row"}
+              height={{ base: "4rem", md: "2rem" }}
             >
               <Text
                 fontFamily={"Cormorant"}
@@ -1105,6 +1108,7 @@ const Home: React.FC<HomeProps> = props => {
         </Box>
 
         <Game />
+        <Mic />
         <Box
           padding="2rem"
           height={"100%"}
