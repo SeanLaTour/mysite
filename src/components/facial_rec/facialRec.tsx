@@ -62,6 +62,8 @@ const Mic: React.FC<MicProps> = props => {
         <Text fontFamily={"Cormorant"} color={"gold"}>
           Microphone: {listening ? "on" : "off"}
         </Text>
+        { !browserSupportsSpeechRecognition ? <span>Browser doesn't support speech recognition.</span> : ""
+  }
         <Button
           _hover={{ backgroundColor: "lightblue" }}
           marginBlock={"1rem"}
